@@ -8,7 +8,7 @@ module.exports = {
       { text: 'vue', link: '/vue/' }
     ],
     sidebar:{
-      '/vue/':genSidebarConfig ('vue前端框架')
+      '/vue/':genSidebarConfig ('vue')
     }
   }
 }
@@ -16,7 +16,7 @@ module.exports = {
 function genSidebarConfig (title) {
   return [
     {
-      title:title,
+      title,
       collapsable: false,
       children: [
         '',
