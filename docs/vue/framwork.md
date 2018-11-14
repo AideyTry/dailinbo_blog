@@ -25,4 +25,44 @@ app.vue是组件的根，组件的根可以去加载导航、轮播、footer组�
 
 Vue如何实现双向数据绑定？
 
+可通过Object.defineProperty()函数模拟双向数据绑定的功能。
 
+1.通过原生js监听实现
+```
+<body>
+  <input type="text" id="userName">
+  <br>
+  <span id="uName"></span>
+  <script>
+    let obj = {}
+    document.querySelector('#userName').addEventListener("keyup",function(event){
+      document.querySelector('#uName').innerText=event.target.value
+    })
+  </script>
+</body>
+```
+2.Object.defineProperty()函数实现
+```
+<body>
+  <input type="text" id="userName">
+  <br>
+  <span id="uName"></span>
+  <script>
+    let obj = {
+      userName:''
+    }
+    Object.defineProperty(obj,'userName',{
+      get:function(val){
+        console.log('get')
+      },
+      set:function(val){
+        console.log('set')
+        document.querySelector('#uName').innerText = val
+      }
+    })
+    document.querySelector('#userName').addEventListener("keyup",function(event){
+      obj.userName=event.target.value
+    })
+  </script>
+</body>
+```
