@@ -12,8 +12,9 @@ module.exports = {
     //   {title:'vue',collapsable:false,link:'/vue/framwork.md'}
     // ]
     sidebar:{
-      '/vue/':genSidebarConfig ('project',{name:'framwork'}),
-      '/project/':genSidebarConfig ('vue',{name:'project'})
+      '/vue/':genSidebarConfig ('vue',{name:'framwork'}),
+      // '/project/':genSidebarConfig ('vue',{name:'project'}),
+      '/vue/':genSidebarConfig ('vue',{name:'base'})
     }
   }
 }
