@@ -1,4 +1,4 @@
-#vue基础知识
+# 一、vue基础知识
 
 1、模板语法
   ```
@@ -70,3 +70,37 @@
 
     Slot
   ```
+
+
+        # 二、vue-router
+        ```
+          1、什么是前端路由?
+          路由是根据不同的url地址展示不同的内容或页面
+          前端路由就是把不同路由对应不同的内容或页面的任务交给前端来做，之前是通过服务端根据url的不同返回不同的页面实现的（后端直出渲染）。其实前端路由前端页面只有首页是存在的，其他的是虚拟出来的。SPA需要前端路由。
+
+          2、前端路由由什么优点和缺点？
+          优点:
+              用户体验好，不需要每次都从服务器全部获取，快速展现给用户（只需首页获取）。
+          缺点：
+              不利于SEO（因为除了首页其他页面路径虚拟出来的）
+              使用浏览器的前进，后退键的时候会重新发送请求，没有合理的利用缓存；
+              单页面无法记住之前滚动的位置，无法在前进、后退的时候记住滚动的位置。
+
+          3、vue-router用来构建SPA
+            vue-router本质上是对history的封装。
+            <router-link></router-link>或者this.$router.push({path:''})跳转
+            <router-view></router-view>组件渲染
+
+
+        ```
+
+   4.vue-router使用
+
+    动态路由匹配
+
+  模式                 		  |匹配路径											|$route.params
+
+  --|:--|--:
+
+   /user/:username | /user/evan | { username: 'evan' } 
+   /user/:username/post/:post_id |/user/evan/post/123  |	{ username: 'evan', post_id: 123 }
