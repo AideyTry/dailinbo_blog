@@ -129,3 +129,26 @@
                   }
                 ]
               ```
+    axios
+      https://www.kancloud.cn/yunye/axios/234845
+             ```
+              axios直接暴露到全局
+              成功.then() 失败.catch()。链式操作。
+              axios.get()
+              axios.post()
+              http配置。get请求通过params:{}传递参数。post请求通过data:{}传递参数
+              axios.all() 可同时请求多个接口
+
+              全局拦截：
+              request拦截
+              axios.interceptors.request.use()
+              请求之前可以做一些Loading处理或其他业务处理。
+              response拦截
+              axios.interceptors.response.use()
+             ```
+    箭头函数作用域和外面作用域是一样的，没有产生新的作用域。
+
+# 三 ES6
+      ECMAScript 6
+
+      1、函数的Rest参数和扩展
